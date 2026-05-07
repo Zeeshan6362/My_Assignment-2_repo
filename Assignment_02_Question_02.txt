@@ -1,0 +1,95 @@
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % clear
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git diff
+diff --git a/app.py b/app.py
+index 373983a..4bdbcdd 100644
+--- a/app.py
++++ b/app.py
+@@ -1,4 +1,6 @@
+ print('This is main program')
+ print('CODE 01 added')
+ print('CODE 02 added')
+-print('CODE 03 added')
+\ No newline at end of file
++print('CODE 03 added')
++print('Feature 01 added')
++print('Feature 02 added')
+\ No newline at end of file
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git add -p 
+diff --git a/app.py b/app.py
+index 373983a..4bdbcdd 100644
+--- a/app.py
++++ b/app.py
+@@ -1,4 +1,6 @@
+ print('This is main program')
+ print('CODE 01 added')
+ print('CODE 02 added')
+-print('CODE 03 added')
+\ No newline at end of file
++print('CODE 03 added')
++print('Feature 01 added')
++print('Feature 02 added')
+\ No newline at end of file
+(1/1) Stage this hunk [y,n,q,a,d,e,p,?]? y
+
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   app.py
+
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git commit -m 'New features 1 and 2 added to main program'
+[main 8c40719] New features 1 and 2 added to main program
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+8c40719 (HEAD -> main) New features 1 and 2 added to main program
+251f8c1 (origin/main) First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git add .
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git commit -m 'Program ending code added' 
+[main 633f36a] Program ending code added
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log
+commit 633f36ab5d86f2d23d4b9cbaff6fd35fba8ec8c8 (HEAD -> main)
+Author: Zeeshan6362 <zeeshan6362034446@gmail.com>
+Date:   Mon May 4 02:44:20 2026 +0530
+
+    Program ending code added
+
+commit 8c4071930bca210c25c1f0546b967dd4a57dd7e2
+Author: Zeeshan6362 <zeeshan6362034446@gmail.com>
+Date:   Mon May 4 02:42:40 2026 +0530
+
+    New features 1 and 2 added to main program
+
+commit 251f8c109c2b6904c0b17af4ef8565df778e64ff (origin/main)
+Author: Zeeshan6362 <zeeshan6362034446@gmail.com>
+Date:   Mon May 4 02:00:32 2026 +0530
+
+    First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+633f36a (HEAD -> main) Program ending code added
+8c40719 New features 1 and 2 added to main program
+251f8c1 (origin/main) First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % 

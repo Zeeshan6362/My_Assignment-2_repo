@@ -1,0 +1,68 @@
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+* main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git checkout -b feature-update
+Switched to a new branch 'feature-update'
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+* feature-update
+  main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git status
+On branch feature-update
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git add .
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git commit -m 'Added feature 03 for new branch'
+[feature-update a6e53be] Added feature 03 for new branch
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+a6e53be (HEAD -> feature-update) Added feature 03 for new branch
+58555ec (main) comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+  feature-update
+* main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git merge feature-update
+Updating 58555ec..a6e53be
+Fast-forward
+ app.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+a6e53be (HEAD -> main, feature-update) Added feature 03 for new branch
+58555ec comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch -d feature-update
+Deleted branch feature-update (was a6e53be).
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+* main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git checkout -b dummy-branch
+Switched to a new branch 'dummy-branch'
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+* dummy-branch
+  main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+  dummy-branch
+* main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch -D dummy-branch
+Deleted branch dummy-branch (was a6e53be).
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git branch
+* main
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % 

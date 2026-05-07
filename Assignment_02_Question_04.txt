@@ -1,0 +1,113 @@
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git stash
+No local changes to save
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git stash
+Saved working directory and index state WIP on main: a6e53be Added feature 03 for new branch
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git stash list
+stash@{0}: WIP on main: a6e53be Added feature 03 for new branch
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % #Imagine the bug is fixed and I want to go back to resume my saved work
+zsh: command not found: #Imagine
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (62f1c71801b17491f8ad9821c9d57ef43a126d6a)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git add .
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git commit -m 'Completed working on new feature for Question 02'
+[main 5519d9b] Completed working on new feature for Question 02
+ 1 file changed, 2 insertions(+)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git git log --oneline
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+5519d9b (HEAD -> main) Completed working on new feature for Question 02
+a6e53be Added feature 03 for new branch
+58555ec comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git add .
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git commit -m 'intentionally adding broken code'
+[main f802da2] intentionally adding broken code
+ 1 file changed, 1 insertion(+)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+f802da2 (HEAD -> main) intentionally adding broken code
+5519d9b Completed working on new feature for Question 02
+a6e53be Added feature 03 for new branch
+58555ec comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git reset --hard HEAD~1 
+HEAD is now at 5519d9b Completed working on new feature for Question 02
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+5519d9b (HEAD -> main) Completed working on new feature for Question 02
+a6e53be Added feature 03 for new branch
+58555ec comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   app.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git add .
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git commit -m 'safe feature added for question 04'
+[main 2522c99] safe feature added for question 04
+ 1 file changed, 2 insertions(+)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+2522c99 (HEAD -> main) safe feature added for question 04
+5519d9b Completed working on new feature for Question 02
+a6e53be Added feature 03 for new branch
+58555ec comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git revert HEAD
+[main 0949a21] Revert "safe feature added for question 04"
+ 1 file changed, 2 deletions(-)
+zeeshanshaikh@ZeeshansMacBook Assignment 2 % git log --oneline
+0949a21 (HEAD -> main) Revert "safe feature added for question 04"
+2522c99 safe feature added for question 04
+5519d9b Completed working on new feature for Question 02
+a6e53be Added feature 03 for new branch
+58555ec comments added to code for understanding purpose
+763c04d (origin/main, origin/HEAD) Merge branch 'main' of https://github.com/Zeeshan6362/My_Assignment-2_repo
+633f36a Program ending code added
+8c40719 New features 1 and 2 added to main program
+b970b27 Add project initialization log to README
+251f8c1 First Commit to add Main Program
